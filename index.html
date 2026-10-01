@@ -39,7 +39,7 @@
   }
   .app{max-width:640px;margin:0 auto;min-height:100vh;display:flex;flex-direction:column;background:var(--bg);position:relative}
 
-  /* ============ HEADER ============ */
+  /* HEADER */
   header{
     background:linear-gradient(135deg,#0f766e 0%,#115e59 60%,#134e4a 100%);
     color:#fff;padding:16px 18px 18px;position:sticky;top:0;z-index:50;
@@ -71,9 +71,8 @@
   .conn-dot.saving{background:#f59e0b;box-shadow:0 0 0 3px rgba(245,158,11,.25);animation:blink 1s infinite}
   .conn-dot.offline{background:#ef4444;box-shadow:0 0 0 3px rgba(239,68,68,.25)}
 
-  /* ============ MAIN ============ */
+  /* MAIN */
   main{flex:1;padding:16px 14px 260px}
-
   .card{
     background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
     padding:16px;margin-bottom:12px;box-shadow:var(--shadow-sm);
@@ -91,7 +90,7 @@
   }
   .card-hint{font-size:11px;color:var(--muted);font-weight:600}
 
-  /* ============ TRANSCRIPT ============ */
+  /* TRANSCRIPT */
   .transcript{
     background:linear-gradient(135deg,#f8fafc,#f1f5f9);
     border:1.5px dashed var(--border-dark);border-radius:var(--radius-sm);
@@ -104,7 +103,7 @@
   }
   .transcript .placeholder{color:var(--muted);font-size:13px;font-weight:600}
 
-  /* ============ PARSED RESULT ============ */
+  /* PARSED */
   .parsed-row{
     display:flex;justify-content:space-between;align-items:center;
     padding:10px 0;border-bottom:1px dashed var(--border);font-size:14px;gap:10px;
@@ -116,7 +115,7 @@
   .parsed-row .v.warn{color:var(--accent-dark)}
   .parsed-row .v.err{color:var(--danger)}
 
-  /* ============ ITEMS ============ */
+  /* ITEMS */
   .item{
     background:#fff;border-radius:14px;margin-bottom:10px;
     border:1px solid var(--border);border-right:4px solid var(--primary);
@@ -143,7 +142,6 @@
   }
   .item button:active{transform:scale(.92)}
   .item button.del{border-color:#fecaca;color:var(--danger);background:#fef2f2}
-
   .item .variants{padding:0 12px 12px;border-top:1px dashed var(--border);margin-top:2px;padding-top:10px}
   .variant-row{
     display:flex;justify-content:space-between;align-items:center;
@@ -157,14 +155,13 @@
     border:1px solid #a7f3d0;margin-top:8px;font-size:13px;
   }
   .variant-row.total .val{font-size:14.5px;color:#065f46}
-
   .empty{
     color:var(--muted);font-size:13px;text-align:center;padding:26px 18px;
     font-weight:600;background:#f8fafc;border-radius:12px;
     border:1.5px dashed var(--border-dark);
   }
 
-  /* ============ BOTTOM BAR ============ */
+  /* BOTTOM BAR */
   .bottom-bar{
     position:fixed;bottom:0;left:0;right:0;z-index:60;
     background:rgba(255,255,255,.96);backdrop-filter:blur(14px);
@@ -173,6 +170,7 @@
     max-width:640px;margin:0 auto;
     box-shadow:0 -4px 20px rgba(15,23,42,.06);
   }
+  .bottom-bar.hidden{display:none}
   .quick-actions{
     display:flex;gap:7px;margin-bottom:10px;overflow-x:auto;padding-bottom:3px;
     scrollbar-width:none;
@@ -214,7 +212,7 @@
   .mode-btn.active{background:linear-gradient(135deg,#fbbf24,#f59e0b);color:#fff;border-color:#f59e0b;box-shadow:0 4px 14px rgba(245,158,11,.4)}
   .mode-btn:active{transform:scale(.94)}
 
-  /* ============ TOAST ============ */
+  /* TOAST */
   #toast{
     position:fixed;top:78px;left:50%;transform:translateX(-50%) translateY(-20px);
     background:#0f172a;color:#fff;padding:12px 20px;border-radius:12px;
@@ -228,7 +226,7 @@
   #toast.warn{background:linear-gradient(135deg,#f59e0b,#b45309)}
   #toast.err{background:linear-gradient(135deg,#dc2626,#b91c1c)}
 
-  /* ============ MODAL ============ */
+  /* MODAL */
   .modal-bg{
     position:fixed;inset:0;background:rgba(15,23,42,.55);z-index:100;
     display:none;align-items:flex-end;justify-content:center;
@@ -258,7 +256,7 @@
   .btn-accent{background:linear-gradient(135deg,#f59e0b,#b45309);color:#fff;box-shadow:0 4px 12px rgba(245,158,11,.3)}
   .btn-sm{flex:none;padding:8px 14px;font-size:12px}
 
-  /* ============ REPORT ============ */
+  /* REPORT */
   #reportArea{
     background:#fff;padding:24px;font-family:'Cairo',Tahoma,sans-serif;
     direction:rtl;color:#0f172a;
@@ -277,7 +275,7 @@
   }
   #reportArea .transcript-box h4{font-size:12px;color:#0f766e;margin-bottom:6px;font-weight:800}
 
-  /* ============ BADGES / SUGGESTIONS ============ */
+  /* BADGES */
   .badge-new{
     display:inline-block;background:#fef3c7;color:#92400e;font-size:10px;
     font-weight:800;padding:3px 9px;border-radius:999px;
@@ -290,7 +288,7 @@
   }
   .suggest-btn:active{transform:scale(.95)}
 
-  /* ============ AUTO BANNER ============ */
+  /* AUTO BANNER */
   .auto-banner{
     background:linear-gradient(135deg,#fbbf24,#f59e0b);color:#78350f;
     padding:10px 16px;border-radius:13px;font-size:12px;font-weight:800;
@@ -300,7 +298,21 @@
   .auto-banner.show{display:flex;justify-content:center}
   .auto-banner .dot{width:8px;height:8px;border-radius:50%;background:#dc2626;animation:blink 1s infinite}
 
-  /* ============ SOUND WAVE ============ */
+  /* DIAGNOSTIC BANNER */
+  .diag-banner{
+    background:#fef2f2;border:1.5px solid #fecaca;color:#991b1b;
+    padding:12px 14px;border-radius:13px;font-size:12px;font-weight:700;
+    margin-bottom:12px;line-height:1.7;
+  }
+  .diag-banner.ok{background:#f0fdf4;border-color:#bbf7d0;color:#166534}
+  .diag-banner.warn{background:#fffbeb;border-color:#fde68a;color:#92400e}
+  .diag-banner button{
+    margin-top:8px;background:#0f172a;color:#fff;border:none;
+    padding:8px 14px;border-radius:9px;font-family:inherit;font-weight:800;
+    font-size:11.5px;cursor:pointer;
+  }
+
+  /* SOUND WAVE */
   .sound-wave{display:inline-flex;align-items:flex-end;gap:2.5px;height:16px}
   .sound-wave span{display:inline-block;width:3px;background:#fff;border-radius:2px;animation:soundWave 1s infinite ease-in-out}
   .sound-wave span:nth-child(1){animation-delay:0s}
@@ -309,10 +321,8 @@
   .sound-wave span:nth-child(4){animation-delay:.45s}
   @keyframes soundWave{0%,100%{height:4px}50%{height:16px}}
 
-  /* ============ ARCHIVE ============ */
-  .archive-search{
-    display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;
-  }
+  /* ARCHIVE */
+  .archive-search{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
   .archive-search input{
     flex:1;min-width:150px;padding:11px 14px;border-radius:11px;
     border:1.5px solid var(--border);background:#f8fafc;
@@ -321,7 +331,6 @@
   }
   .archive-search input:focus{border-color:var(--primary-light);background:#fff;box-shadow:0 0 0 3px rgba(20,184,166,.12)}
   .archive-search input[type="date"]{flex:0 0 auto;min-width:150px}
-
   .archive-card{
     background:#fff;border:1px solid var(--border);border-radius:14px;
     padding:14px;margin-bottom:10px;box-shadow:var(--shadow-sm);
@@ -351,7 +360,7 @@
   .archive-actions button.img{background:#ede9fe;color:#5b21b6;border-color:#ddd6fe}
   .archive-actions button.del{background:#fee2e2;color:#b91c1c;border-color:#fecaca}
 
-  /* ============ TABS ============ */
+  /* TABS */
   .tabs{
     display:flex;gap:6px;background:#f1f5f9;padding:5px;border-radius:14px;
     margin-bottom:14px;border:1px solid var(--border);
@@ -367,12 +376,6 @@
   .tab-panel.active{display:block}
   @keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
 
-  /* ============ LOADING ============ */
-  .spinner{
-    display:inline-block;width:16px;height:16px;border:2px solid rgba(255,255,255,.3);
-    border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;
-  }
-  @keyframes spin{to{transform:rotate(360deg)}}
   .loading-state{
     text-align:center;padding:30px 18px;color:var(--muted);font-size:13px;font-weight:600;
   }
@@ -380,8 +383,8 @@
     width:34px;height:34px;border:3px solid var(--border);border-top-color:var(--primary);
     border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 12px;
   }
+  @keyframes spin{to{transform:rotate(360deg)}}
 
-  /* ============ SMART TIP ============ */
   .tip-card{
     background:linear-gradient(135deg,#fffbeb,#fef3c7);
     border:1.5px solid #fde68a !important;
@@ -391,10 +394,7 @@
   .tip-body{font-size:12px;line-height:1.9;color:#78350f;font-weight:600}
   .tip-body b{color:#92400e;font-weight:800}
 
-  /* ============ HISTORY DETAIL MODAL ============ */
-  .hist-summary{
-    display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px;
-  }
+  .hist-summary{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
   .hist-stat{
     background:#f8fafc;border-radius:11px;padding:11px;text-align:center;
     border:1px solid var(--border);
@@ -409,16 +409,6 @@
   .hist-item .nm{font-weight:800;font-size:13.5px;color:var(--text);margin-bottom:6px}
   .hist-item .vv{font-size:11.5px;color:var(--muted);font-weight:600;padding:3px 0;display:flex;justify-content:space-between}
   .hist-item .tt{font-size:13px;font-weight:900;color:var(--primary-dark);margin-top:6px;padding-top:6px;border-top:1px dashed var(--border);display:flex;justify-content:space-between}
-
-  /* ============ UTIL ============ */
-  .row-between{display:flex;justify-content:space-between;align-items:center;gap:8px}
-  .text-muted{color:var(--muted)}
-  .text-ok{color:var(--success)}
-  .text-warn{color:var(--accent-dark)}
-  .text-err{color:var(--danger)}
-  .mt-2{margin-top:8px}
-  .mt-3{margin-top:12px}
-  .mb-2{margin-bottom:8px}
 </style>
 </head>
 <body>
@@ -446,12 +436,14 @@
       <button class="tab" data-tab="archive">📚 أرشيف الجرد</button>
     </div>
 
-    <!-- ================= LIVE TAB ================= -->
+    <!-- ============ LIVE TAB ============ -->
     <div class="tab-panel active" id="tab-live">
       <div class="auto-banner" id="autoBanner">
         <span class="dot"></span>
         <span>الوضع التلقائي: المايك يفتح لوحده بعد كل تسجيل</span>
       </div>
+
+      <div id="diagBox"></div>
 
       <div class="card">
         <div class="card-head">
@@ -496,7 +488,7 @@
       </div>
     </div>
 
-    <!-- ================= ARCHIVE TAB ================= -->
+    <!-- ============ ARCHIVE TAB ============ -->
     <div class="tab-panel" id="tab-archive">
       <div class="card">
         <div class="card-head">
@@ -535,6 +527,20 @@
 
 <script>
 /* ============================================================
+   تشخيص أولي (قبل Firebase)
+   ============================================================ */
+window.__DIAG = {
+  speechSupported: !!(window.SpeechRecognition || window.webkitSpeechRecognition),
+  getUserMediaSupported: !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia),
+  isSecureContext: window.isSecureContext,
+  hasSpeechSynthesis: !!window.speechSynthesis,
+  hasJsPDF: !!(window.jspdf && window.jspdf.jsPDF),
+  hasHtml2canvas: typeof html2canvas === 'function',
+  hasFirebase: typeof firebase !== 'undefined'
+};
+console.log('🔍 تشخيص:', window.__DIAG);
+
+/* ============================================================
    Firebase
    ============================================================ */
 const firebaseConfig = {
@@ -549,18 +555,24 @@ const firebaseConfig = {
 let db = null;
 let dbConnected = false;
 try {
-  firebase.initializeApp(firebaseConfig);
-  db = firebase.database();
-  db.ref('.info/connected').on('value', snap => {
-    dbConnected = !!snap.val();
-    updateConnUI();
-  });
-} catch(e){ console.warn("Firebase غير مهيأ", e); }
+  if(typeof firebase !== 'undefined' && firebase.initializeApp){
+    firebase.initializeApp(firebaseConfig);
+    db = firebase.database();
+    db.ref('.info/connected').on('value', snap => {
+      dbConnected = !!snap.val();
+      updateConnUI();
+    });
+  }
+} catch(e){
+  console.warn("Firebase غير مهيأ", e);
+  db = null;
+}
 
 function updateConnUI(saving=false){
   const dot = document.getElementById('connDot');
   const lbl = document.getElementById('connLabel');
   if(!dot || !lbl) return;
+  if(!db){ dot.className = 'conn-dot offline'; lbl.textContent = 'غير متاح'; return; }
   if(saving){ dot.className = 'conn-dot saving'; lbl.textContent = 'جارٍ الحفظ'; return; }
   if(dbConnected){ dot.className = 'conn-dot online'; lbl.textContent = 'متصل'; }
   else { dot.className = 'conn-dot offline'; lbl.textContent = 'غير متصل'; }
@@ -629,7 +641,7 @@ async function loadCatalogFromFirebase(){
       }));
       if(list.length) CATALOG = list;
     }
-  }catch(e){ console.warn(e); }
+  }catch(e){ console.warn('loadCatalog', e); }
 }
 
 /* ============================================================
@@ -992,7 +1004,6 @@ const state = {
   autoConfirmTimer: null,
   sessionActive: false,
   lastEditedItemId: null,
-  transcriptLog: [],
   currentSessionTranscript: '',
   archive: [],
   archiveFilter: { text: '', date: '' }
@@ -1003,12 +1014,36 @@ const state = {
    ============================================================ */
 function toast(msg, type=''){
   const el=document.getElementById('toast');
+  if(!el) return;
   el.textContent=msg;el.className='show '+type;
   clearTimeout(el._t);el._t=setTimeout(()=>el.className='',2800);
 }
 function openModal(html){ document.getElementById('modalContent').innerHTML=html; document.getElementById('modalBg').classList.add('show'); }
 function closeModal(){ document.getElementById('modalBg').classList.remove('show'); }
 document.getElementById('modalBg').addEventListener('click', e=>{ if(e.target.id==='modalBg') closeModal(); });
+
+/* ============================================================
+   Diagnostics UI
+   ============================================================ */
+function renderDiagnostics(){
+  const box = document.getElementById('diagBox');
+  if(!box) return;
+  const issues = [];
+  if(!window.__DIAG.speechSupported){
+    issues.push('⚠️ المتصفح <b>لا يدعم التعرف الصوتي</b>. افتح الموقع في <b>Google Chrome</b> للأندرويد.');
+  }
+  if(!window.__DIAG.isSecureContext){
+    issues.push('⚠️ الموقع مش على HTTPS — التعرف الصوتي محتاج HTTPS.');
+  }
+  if(!window.__DIAG.hasFirebase || !db){
+    issues.push('⚠️ Firebase مش متصل — الحفظ السحابي مش هيعمل.');
+  }
+  if(issues.length === 0){
+    box.innerHTML = '';
+    return;
+  }
+  box.innerHTML = `<div class="diag-banner">${issues.join('<br>')}</div>`;
+}
 
 /* ============================================================
    TTS
@@ -1038,928 +1073,26 @@ function speak(text,callback){
 }
 
 /* ============================================================
-   Speech
+   Speech — مع طلب إذن المايك أولاً
    ============================================================ */
-const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+async function requestMicPermission(){
+  if(!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia){
+    // بعض المتصفحات مش عندها getUserMedia — نكمل عادي
+    return true;
+  }
+  try{
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    // سيب المايك مفتوح شوية عشان يفضل الإذن محفوظ
+    stream.getTracks().forEach(t => t.stop());
+    return true;
+  }catch(e){
+    console.warn('Mic permission error', e);
+    return false;
+  }
+}
+
 function initRecognition(){
-  if(!SR){ toast('متصفحك لا يدعم التعرف على الصوت','err'); return null; }
-  const r=new SR();
-  r.lang='ar-EG';r.continuous=false;r.interimResults=true;r.maxAlternatives=3;
-  r.onstart=()=>{ document.getElementById('liveDot').style.display='inline'; };
-  r.onresult=(e)=>{
-    let interim='',final='';
-    for(let i=e.resultIndex;i<e.results.length;i++){
-      const t=e.results[i][0].transcript;
-      if(e.results[i].isFinal) final+=t; else interim+=t;
-    }
-    const box=document.getElementById('transcriptBox');
-    if(final){ state.finalTranscript=final.trim();box.textContent=state.finalTranscript;box.classList.remove('live'); }
-    else { box.textContent=interim;box.classList.add('live'); }
-  };
-  r.onerror=(e)=>{ console.warn('Speech error',e); };
-  r.onend=()=>{
-    document.getElementById('liveDot').style.display='none';
-    document.getElementById('statusPill').textContent=state.autoMode?'تلقائي':'جاهز';
-    document.getElementById('micBtn').classList.remove('recording');
-    document.getElementById('micBtn').innerHTML=state.autoMode?'🎙️ يسمع تلقائياً':'🎙️ ابدأ الجرد';
-    state.recording=false;
-    if(state.finalTranscript){
-      const t=state.finalTranscript;state.finalTranscript='';
-      handleCommand(t);
-    } else {
-      if(state.autoMode&&state.sessionActive) scheduleAutoRestart(300);
-    }
-  };
-  return r;
-}
-function startRecording(auto=false){
-  if(!state.recognition) state.recognition=initRecognition();
-  if(!state.recognition) return;
-  if(state.recording) return;
-  try{
-    state.finalTranscript='';
-    state.recognition.start();
-    state.recording=true;
-    document.getElementById('micBtn').classList.add('recording');
-    document.getElementById('micBtn').innerHTML='<span class="sound-wave"><span></span><span></span><span></span><span></span></span> يسمع...';
-    document.getElementById('statusPill').textContent='يستمع';
-    document.getElementById('statusPill').className='status-pill listening';
-    if(!auto) document.getElementById('transcriptBox').innerHTML='<span class="placeholder">تحدث الآن...</span>';
-  }catch(e){ console.warn(e); }
-}
-function stopRecording(){
-  if(state.recognition&&state.recording){ try{ state.recognition.stop(); }catch(e){} }
-}
-function scheduleAutoRestart(delay=500){
-  clearTimeout(state.autoRestartTimer);
-  state.autoRestartTimer=setTimeout(()=>{
-    if(state.autoMode&&state.sessionActive&&!state.recording) startRecording(true);
-  },delay);
-}
-function updateAutoUI(){
-  const banner=document.getElementById('autoBanner');
-  const btn=document.getElementById('autoModeBtn');
-  const pill=document.getElementById('statusPill');
-  const mic=document.getElementById('micBtn');
-  if(state.autoMode){
-    banner.classList.add('show');btn.classList.add('active');
-    if(!state.recording&&!state.sessionActive){ pill.textContent='جاهز (تلقائي)';pill.className='status-pill auto'; }
-    if(!state.recording) mic.innerHTML=state.sessionActive?'🎙️ يسمع تلقائياً':'🎙️ ابدأ الجرد';
-  } else {
-    banner.classList.remove('show');btn.classList.remove('active');
-    if(!state.recording){ pill.textContent='جاهز';pill.className='status-pill';mic.innerHTML='🎙️ ابدأ الجرد'; }
-  }
-}
-
-/* ============================================================
-   Auto confirm
-   ============================================================ */
-function scheduleAutoConfirm(delay=3000){
-  clearTimeout(state.autoConfirmTimer);
-  const hintEl=document.getElementById('autoSaveHint');
-  let remaining=Math.ceil(delay/1000);
-  if(hintEl) hintEl.textContent=`حفظ تلقائي خلال ${remaining} ث`;
-  const tick=setInterval(()=>{
-    remaining--;
-    if(remaining>0&&hintEl) hintEl.textContent=`حفظ تلقائي خلال ${remaining} ث`;
-    else clearInterval(tick);
-  },1000);
-  state.autoConfirmTimer=setTimeout(()=>{
-    if(hintEl) hintEl.textContent='';
-    if(state.pending&&!state.awaitingWeightFor){
-      confirmPending(true);
-    }
-  },delay);
-}
-function cancelAutoConfirm(){
-  clearTimeout(state.autoConfirmTimer);
-  const hintEl=document.getElementById('autoSaveHint');
-  if(hintEl) hintEl.textContent='';
-}
-
-/* ============================================================
-   Command handler
-   ============================================================ */
-function handleCommand(text){
-  const trimmed=(text||'').trim();
-  if(!trimmed) return;
-  cancelAutoConfirm();
-
-  // سجل النص
-  state.currentSessionTranscript += (state.currentSessionTranscript ? ' | ' : '') + trimmed;
-
-  if(state.awaitingWeightFor){
-    const w=extractWeightOnly(trimmed);
-    if(w!==null){
-      const aw=state.awaitingWeightFor;
-      aw.bagWeight=w;aw.totalWeight=aw.quantity*w;aw.needsWeight=false;
-      state.awaitingWeightFor=null;state.pending=aw;
-      showParsedResult(aw);
-      speakAndResume(buildConfirmMsg(aw));
-      scheduleAutoConfirm();
-      return;
-    }
-    toast('❓ ما فهمت الوزن، قول مثلًا "25 كيلو"','warn');
-    speakAndResume('ما فهمت الوزن، قول مثلًا خمسة وعشرين كيلو');
-    return;
-  }
-
-  const parsed=parseInventoryCommand(trimmed);
-  console.log('📥 أمر:',trimmed,'→',parsed);
-
-  if(parsed.type==='inventory'){
-    if(parsed.error){
-      if(parsed.suggestions&&parsed.suggestions.length){
-        showSuggestions(parsed);
-        speak('ما لقيتش الصنف ده، اختار من الاقتراحات لو سمحت');
-      } else {
-        toast('❓ '+parsed.error+'، أعد المحاولة','warn');
-        speakAndResume('لم أفهم الأمر، أعد من فضلك');
-      }
-      return;
-    }
-    if(parsed.needsWeight){
-      state.awaitingWeightFor=parsed;
-      const ask=`تمام، سجلت ${parsed.quantity} شكارة ${parsed.productName}. وزن الشكارة كام؟`;
-      toast('❓ '+ask,'warn');
-      state.pending=parsed;
-      showParsedResult(parsed,true);
-      speakAndResume(ask);
-      return;
-    }
-    state.pending=parsed;
-    showParsedResult(parsed);
-    speakAndResume(buildConfirmMsg(parsed));
-    scheduleAutoConfirm();
-    return;
-  }
-
-  if(parsed.type==='confirm'){ confirmPending(); return; }
-  if(parsed.type==='cancel'){ state.pending=null;state.awaitingWeightFor=null;hideParseCard();toast('تم الإلغاء','warn');speakAndResume('تمام، اتلغى');return; }
-  if(parsed.type==='finish'){ reviewInventory();speakAndResume(parsed.reply||'تمام، الجرد اتقفل');return; }
-  if(parsed.type==='review'){ reviewInventory();speakAndResume(parsed.reply||'تمام، دي مراجعة الجرد');return; }
-  if(parsed.type==='print'){ printReport();speakAndResume(parsed.reply||'جاري إنشاء التقرير');return; }
-  if(parsed.type==='undo_last'){ undoLast();speakAndResume(parsed.reply||'اتمسح آخر صنف');return; }
-  if(parsed.type==='clear_all'){ clearAll();speakAndResume(parsed.reply||'اتمسح الكل');return; }
-  if(parsed.type==='delete_item_by_name'){
-    const name=trimmed.replace(/^(امسح|احذف|شيل)\s+/,'').trim();
-    const deleted=deleteItemByName(name);
-    speakAndResume(deleted?`تم مسح ${name}`:`مش لاقي ${name} في الجرد`);
-    return;
-  }
-  if(parsed.type==='edit_qty'){ promptEditQty();speakAndResume(parsed.reply||'اختار الصنف');return; }
-  if(parsed.type==='read_items'){ readItems();return; }
-  if(parsed.type==='read_total'){ readTotal();return; }
-  if(parsed.type==='read_count'){ readCount();return; }
-  if(parsed.type==='help'){ readHelp();return; }
-  if(parsed.type==='toggle_auto'){ toggleAutoMode();return; }
-  if(parsed.type==='continue'){ speakAndResume('اتفضل، قول اللي بعده');return; }
-  toast('لم أفهم الأمر','warn');speakAndResume('ما فهمتش، حاول تاني');
-}
-
-function speakAndResume(text){
-  if(state.autoMode&&state.sessionActive){
-    speak(text,()=>{ scheduleAutoRestart(400); });
-  } else {
-    speak(text);
-  }
-}
-function buildConfirmMsg(p){
-  const unitText=p.unitType==='bag'?'شيكارة':p.unitType==='kg'?'كيلو':p.unitType==='g'?'جرام':p.unitType==='ton'?'طن':'وحدة';
-  const weightText=(p.unitType==='bag'&&p.bagWeight)?` وزن ${p.bagWeight}`:'';
-  return `سجلت ${p.quantity} ${unitText} ${p.productName}${weightText}`;
-}
-
-/* ============================================================
-   Suggestions
-   ============================================================ */
-function showSuggestions(parsed){
-  const card=document.getElementById('parseCard');
-  const box=document.getElementById('parsedResult');
-  const suggHtml=(parsed.suggestions||[]).map(p=>
-    `<button class="suggest-btn" onclick="pickSuggestion('${p.id}')">${p.name}</button>`
-  ).join('');
-  box.innerHTML=`
-    <div class="parsed-row"><span class="k">النص</span>
-      <span class="v" style="font-weight:600;font-size:12px;color:#64748b">"${parsed.rawText}"</span></div>
-    <div class="parsed-row"><span class="k">❓</span>
-      <span class="v warn">ما لقيتش صنف مطابق. تقصد أنهي واحد؟</span></div>
-    <div style="padding-top:8px">${suggHtml}</div>`;
-  card.style.display='block';
-  card.scrollIntoView({behavior:'smooth',block:'nearest'});
-  window._lastRaw=parsed.rawText;
-}
-window.pickSuggestion=function(productId){
-  const p=CATALOG.find(x=>x.id===productId);
-  if(!p) return;
-  const raw=window._lastRaw||'';
-  const forced=parseInventoryCommandWithProduct(raw,p);
-  state.pending=forced;
-  showParsedResult(forced);
-  speakAndResume(buildConfirmMsg(forced));
-  scheduleAutoConfirm(2000);
-};
-function parseInventoryCommandWithProduct(rawText,forcedProduct){
-  const parsed=parseInventoryCommand(rawText);
-  parsed.product=forcedProduct;parsed.productName=forcedProduct.name;parsed.error=null;
-  if(parsed.quantity===null||parsed.quantity===undefined){
-    const tokens=tokenize(rawText);
-    const nums=convertNumbers(tokens).filter(t=>t.type==='num');
-    if(nums.length) parsed.quantity=nums[0].value;
-  }
-  if(parsed.unitType==='bag'&&parsed.bagWeight===null){
-    parsed.bagWeight=forcedProduct.bagWeight||null;
-    parsed.usedDefaultWeight=!!forcedProduct.bagWeight;
-  }
-  if(parsed.quantity&&parsed.bagWeight){
-    parsed.totalWeight=parsed.quantity*parsed.bagWeight;
-    parsed.needsWeight=false;
-  }
-  return parsed;
-}
-function extractWeightOnly(text){
-  const tokens=tokenize(text);
-  const nums=convertNumbers(tokens);
-  for(const t of nums){ if(t.type==='num') return t.value; }
-  return null;
-}
-
-/* ============================================================
-   Show parsed
-   ============================================================ */
-function showParsedResult(p,pendingWeight=false){
-  const card=document.getElementById('parseCard');
-  const box=document.getElementById('parsedResult');
-  const unitLabel=p.unitType==='bag'?'شيكارة':p.unitType==='kg'?'كجم':p.unitType==='g'?'جرام':p.unitType==='ton'?'طن':'وحدة';
-  const isNew=!p.product;
-  const badgeNew=isNew?'<span class="badge-new">صنف غير مُعرف</span>':'';
-  const qtyText=p.unitType==='bag'?`${p.quantity} شكارة`:`${p.quantity} ${unitLabel}`;
-  const defaultNote=(p.usedDefaultWeight&&p.bagWeight)?' <span style="color:#64748b;font-size:11px">(افتراضي)</span>':'';
-
-  let mergeNote = '';
-  if(p.productName){
-    const existing = state.items.find(x => normalizeArabic(x.name) === normalizeArabic(p.productName));
-    if(existing && Object.keys(existing.variants).length){
-      const lines = Object.keys(existing.variants).map(k=>{
-        const v = existing.variants[k];
-        const bags = (+k) > 0 ? (v / (+k)).toFixed(2) : v;
-        return (+k) > 0
-          ? `${bags} شكارة (${v.toFixed(2)} كجم) من فئة ${k}`
-          : `${v.toFixed(2)} (وحدة)`;
-      });
-      mergeNote = `
-        <div class="parsed-row" style="flex-direction:column;align-items:flex-start;gap:4px">
-          <span class="k">📌 موجود بالفعل — سيتم التجميع</span>
-          <span style="font-size:12px;color:#0f766e;line-height:1.7;font-weight:700">${lines.join('<br>')}</span>
-        </div>`;
-    }
-  }
-
-  box.innerHTML=`
-    <div class="parsed-row"><span class="k">الصنف</span>
-      <span class="v">${p.productName} ${badgeNew}</span></div>
-    <div class="parsed-row"><span class="k">${p.unitType==='bag'?'الكمية (عدد الشكاير)':'الكمية'}</span>
-      <span class="v">${qtyText}</span></div>
-    ${p.unitType==='bag'&&p.bagWeight?`
-    <div class="parsed-row"><span class="k">وزن الشكارة</span>
-      <span class="v">${p.bagWeight} كجم${defaultNote}</span></div>`:''}
-    ${p.totalWeight!==null&&p.totalWeight!==undefined?`
-    <div class="parsed-row"><span class="k">الإجمالي المضاف</span>
-      <span class="v ok">${(+p.totalWeight).toFixed(2)} كجم</span></div>`:''}
-    ${mergeNote}
-    ${pendingWeight?`
-    <div class="parsed-row"><span class="k">⚠️</span>
-      <span class="v warn">في انتظار وزن الشكارة</span></div>`:''}`;
-  card.style.display='block';
-  card.scrollIntoView({behavior:'smooth',block:'nearest'});
-}
-function hideParseCard(){
-  document.getElementById('parseCard').style.display='none';
-  document.getElementById('parsedResult').innerHTML='';
-  cancelAutoConfirm();
-}
-
-/* ============================================================
-   Confirm + Smart Save (Merge)
-   ============================================================ */
-async function confirmPending(auto=false){
-  cancelAutoConfirm();
-  const p=state.pending;
-  if(!p){ if(auto) return; toast('لا يوجد أمر في الانتظار','warn'); return; }
-  if(p.unitType==='bag'&&p.bagWeight===null){
-    if(!auto) toast('❓ ما زلت في انتظار وزن الشكارة','warn');
-    return;
-  }
-  const item = applyInventoryToItems(p);
-  state.pending=null;
-  state.awaitingWeightFor=null;
-  hideParseCard();
-  renderItems();
-  await saveItem(item);
-  toast('💾 '+(auto?'تم الحفظ تلقائيًا: ':'تم الحفظ: ')+buildConfirmMsg(p),'ok');
-  if(state.autoMode&&state.sessionActive) scheduleAutoRestart(500);
-}
-
-async function saveItem(item){
-  if(!db) return;
-  try{
-    updateConnUI(true);
-    const path=`inventory/${ctx.branch}/${ctx.date}/items/${item.id}`;
-    await db.ref(path).set(item);
-    await db.ref(`inventory/${ctx.branch}/${ctx.date}/meta`).update({
-      branch:ctx.branch,date:ctx.date,user:ctx.user,
-      updatedAt:firebase.database.ServerValue.TIMESTAMP
-    });
-    updateConnUI();
-  }catch(e){ console.error('فشل الحفظ',e); toast('فشل الحفظ في السحابة','err'); updateConnUI(); }
-}
-
-/* ============================================================
-   Render items (with variants)
-   ============================================================ */
-function renderItems(){
-  const box=document.getElementById('itemsList');
-  document.getElementById('itemsCount').textContent=state.items.length;
-  if(!state.items.length){
-    box.innerHTML='<div class="empty">لا توجد أصناف بعد</div>';
-    document.getElementById('totalsBox').style.display='none';
-    return;
-  }
-  box.innerHTML = state.items.map(it=>{
-    const variantKeys = Object.keys(it.variants).map(Number).sort((a,b)=>b-a);
-    const variantsHtml = variantKeys.length ? `
-      <div class="variants">
-        ${variantKeys.map(k=>{
-          const v = it.variants[String(k)];
-          if(k === 0){
-            return `<div class="variant-row">
-              <span class="lbl">وحدة مجهولة</span>
-              <span class="val">${v.toFixed(2)}</span>
-            </div>`;
-          }
-          const bags = v / k;
-          return `<div class="variant-row">
-            <span class="lbl">فئة ${k} كجم</span>
-            <span class="val">${bags.toFixed(2)} شكارة = ${v.toFixed(2)} كجم</span>
-          </div>`;
-        }).join('')}
-        <div class="variant-row total">
-          <span class="lbl">إجمالي الصنف</span>
-          <span class="val">${it.totalKg.toFixed(2)} كجم</span>
-        </div>
-      </div>` : '';
-
-    return `
-    <div class="item" data-id="${it.id}">
-      <div class="head">
-        <div class="info">
-          <div class="name">${it.name} <span class="save-badge">✓ محفوظ</span></div>
-        </div>
-        <div class="qty">${it.totalKg.toFixed(2)} كجم</div>
-        <div class="actions">
-          <button class="edit" onclick="editItem('${it.id}')">✏️</button>
-          <button class="del" onclick="deleteItem('${it.id}')">🗑️</button>
-        </div>
-      </div>
-      ${variantsHtml}
-    </div>`;
-  }).join('');
-
-  const total = state.items.reduce((a,i)=>a + i.totalKg, 0);
-  const tb=document.getElementById('totalsBox');
-  tb.style.display='block';
-  tb.textContent=`إجمالي الأصناف: ${state.items.length} — إجمالي الأوزان: ${total.toFixed(2)} كجم`;
-}
-
-/* ============================================================
-   Voice reads
-   ============================================================ */
-function readItems(){
-  if(!state.items.length){ speakAndResume('مفيش حاجة متسجلة لسه'); return; }
-  const parts = state.items.map(it=>{
-    const lines = Object.keys(it.variants).map(k=>{
-      const v = it.variants[k];
-      if(+k === 0) return `${v.toFixed(2)} وحدة`;
-      const bags = (v / (+k)).toFixed(2);
-      return `${bags} شكارة فئة ${k} كيلو بإجمالي ${v.toFixed(1)} كيلو`;
-    }).join('، و');
-    return `${it.name}: ${lines}`;
-  });
-  let text;
-  if(parts.length<=3) text='المسجل: '+parts.join('. و');
-  else text=`المسجل ${parts.length} صنف. أول 3: `+parts.slice(0,3).join('. و')+'. والباقي في القايمة';
-  speakAndResume(text);
-}
-function readTotal(){
-  if(!state.items.length){ speakAndResume('مفيش حاجة متسجلة'); return; }
-  const total = state.items.reduce((a,i)=>a + i.totalKg, 0);
-  speakAndResume(`إجمالي وزن الجرد ${total.toFixed(1)} كيلو جرام، على ${state.items.length} صنف`);
-}
-function readCount(){ speakAndResume(`عندك ${state.items.length} صنف في الجرد`); }
-function readHelp(){
-  speakAndResume('تقدر تقول: 3 شكاير بادي 50 كيلو، أو 10 كيلو ناهي. وأوامر: خلصت، راجع الجرد، اطبع التقرير، امسح آخر صنف، عدل الكمية، قول اللي اتسجل، قول الإجمالي، كم صنف');
-}
-
-/* ============================================================
-   Edit/Delete
-   ============================================================ */
-function deleteItem(id){
-  state.items=state.items.filter(i=>i.id!==id);
-  if(db) db.ref(`inventory/${ctx.branch}/${ctx.date}/items/${id}`).remove();
-  renderItems();toast('تم الحذف','warn');
-}
-function undoLast(){
-  if(!state.items.length){ toast('لا يوجد أصناف','warn'); return; }
-  const last=state.items[state.items.length-1];
-  deleteItem(last.id);
-}
-function clearAll(){
-  state.items.forEach(it=>{ if(db) db.ref(`inventory/${ctx.branch}/${ctx.date}/items/${it.id}`).remove(); });
-  state.items=[];
-  state.currentSessionTranscript='';
-  renderItems();toast('تم مسح الكل','warn');
-}
-function deleteItemByName(name){
-  const norm=normalizeArabic(name);
-  const idx=state.items.findIndex(it=>{
-    const n=normalizeArabic(it.name);
-    return n.includes(norm)||norm.includes(n)||levenshtein(n,norm)<3;
-  });
-  if(idx>=0){ deleteItem(state.items[idx].id); return true; }
-  return false;
-}
-
-function editItem(id){
-  const it=state.items.find(i=>i.id===id);
-  if(!it) return;
-  const keys = Object.keys(it.variants).map(Number).sort((a,b)=>b-a);
-  if(!keys.length){ toast('لا يوجد variants','warn'); return; }
-
-  const rows = keys.map(k=>{
-    const v = it.variants[String(k)];
-    const kg = v.toFixed(2);
-    const label = k === 0 ? 'وحدة' : `فئة ${k} كجم`;
-    const bags = k>0 ? (v/k).toFixed(2)+' شكارة' : '';
-    return `
-      <div class="parsed-row">
-        <span class="k">${label}</span>
-        <span class="v">${kg} كجم ${bags?'('+bags+')':''}
-          <button class="btn btn-outline btn-sm" style="margin-right:6px"
-            onclick="editVariant('${it.id}', ${k})">✏️</button>
-          <button class="btn btn-outline btn-sm" style="color:#dc2626;border-color:#fecaca"
-            onclick="deleteVariant('${it.id}', ${k})">🗑️</button>
-        </span>
-      </div>`;
-  }).join('');
-
-  openModal(`
-    <h2>✏️ ${it.name} — إجمالي ${it.totalKg.toFixed(2)} كجم</h2>
-    <div style="max-height:400px;overflow-y:auto">${rows}</div>
-    <div class="modal-actions">
-      <button class="btn btn-outline" onclick="closeModal()">إغلاق</button>
-    </div>
-  `);
-}
-
-window.editVariant = function(itemId, weightKey){
-  const it = state.items.find(x=>x.id===itemId);
-  if(!it) return;
-  const currentKg = it.variants[String(weightKey)];
-  const label = weightKey === 0 ? 'الوحدة' : `فئة ${weightKey}`;
-  const v = prompt(`عدّل إجمالي كجم لـ "${label}" في ${it.name} (الحالي: ${currentKg.toFixed(2)} كجم):`, currentKg.toFixed(2));
-  if(v === null) return;
-  const n = parseFloat(v);
-  if(isNaN(n) || n < 0){ toast('قيمة غير صحيحة','err'); return; }
-  it.variants[String(weightKey)] = n;
-  it.totalKg = Object.values(it.variants).reduce((a,b)=>a+b, 0);
-  saveItem(it); renderItems(); closeModal();
-  toast('تم التعديل','ok');
-};
-
-window.deleteVariant = function(itemId, weightKey){
-  const it = state.items.find(x=>x.id===itemId);
-  if(!it) return;
-  if(!confirm(`متأكد من حذف فئة ${weightKey} في ${it.name}؟`)) return;
-  delete it.variants[String(weightKey)];
-  it.totalKg = Object.values(it.variants).reduce((a,b)=>a+b, 0);
-  if(!Object.keys(it.variants).length){
-    deleteItem(itemId);
-  } else {
-    saveItem(it); renderItems();
-  }
-  closeModal();
-  toast('تم الحذف','warn');
-};
-
-function promptEditQty(){
-  if(!state.items.length){ toast('لا يوجد أصناف','warn'); return; }
-  openModal(`
-    <h2>✏️ اختار صنف لتعديله</h2>
-    <div style="max-height:300px;overflow-y:auto">
-      ${state.items.map(it=>`
-        <div class="parsed-row">
-          <span class="k">${it.name}</span>
-          <span class="v">${it.totalKg.toFixed(2)} كجم
-            <button class="btn btn-outline btn-sm" style="margin-right:6px"
-              onclick="closeModal();editItem('${it.id}')">✏️</button>
-          </span>
-        </div>`).join('')}
-    </div>
-    <div class="modal-actions"><button class="btn btn-outline" onclick="closeModal()">إغلاق</button></div>
-  `);
-}
-window.deleteItem=deleteItem;window.editItem=editItem;window.promptEditQty=promptEditQty;
-
-/* ============================================================
-   Review
-   ============================================================ */
-function reviewInventory(){
-  if(!state.items.length){ toast('لا يوجد أصناف للمراجعة','warn'); return; }
-  const total = state.items.reduce((a,i)=>a + i.totalKg, 0);
-  const rows = state.items.map(it=>{
-    const variants = Object.keys(it.variants).map(k=>{
-      const v = it.variants[k];
-      if(+k === 0) return `${v.toFixed(2)} (وحدة)`;
-      return `${(v/(+k)).toFixed(2)} × ${k}كجم = ${v.toFixed(2)}كجم`;
-    }).join(' + ');
-    return `<div class="parsed-row" style="flex-direction:column;align-items:flex-start;gap:4px">
-      <span class="v" style="font-size:14px">${it.name}</span>
-      <span style="font-size:11px;color:#64748b">${variants}</span>
-      <span class="v ok" style="font-size:13px">${it.totalKg.toFixed(2)} كجم</span>
-    </div>`;
-  }).join('');
-  openModal(`
-    <h2>📋 مراجعة الجرد النهائي</h2>
-    <div class="card" style="margin:0 0 12px">
-      <div class="parsed-row"><span class="k">عدد الأصناف</span><span class="v">${state.items.length}</span></div>
-      <div class="parsed-row"><span class="k">إجمالي الأوزان</span><span class="v ok">${total.toFixed(2)} كجم</span></div>
-    </div>
-    <div style="max-height:300px;overflow-y:auto">${rows}</div>
-    <div class="modal-actions">
-      <button class="btn btn-outline" onclick="closeModal()">إغلاق</button>
-      <button class="btn btn-primary" onclick="printReport()">🖨️ PDF</button>
-    </div>`);
-}
-window.closeModal=closeModal;window.printReport=printReport;window.reviewInventory=reviewInventory;
-
-/* ============================================================
-   Report Builder (shared with PDF & PNG)
-   ============================================================ */
-function buildReportHTML(inv){
-  const items = inv.items || [];
-  const total = items.reduce((a,i)=>a + (i.totalKg||0), 0);
-  let tbody = '';
-  items.forEach((it,i)=>{
-    const variants = it.variants || {};
-    const keys = Object.keys(variants).map(Number).sort((a,b)=>b-a);
-    keys.forEach((k, idx)=>{
-      const v = variants[String(k)];
-      const isFirst = idx === 0;
-      const rowspan = keys.length;
-      const bags = +k > 0 ? (v/(+k)).toFixed(2) : '-';
-      tbody += `<tr class="${isFirst?'group':''}">
-        ${isFirst?`<td rowspan="${rowspan}">${i+1}</td><td rowspan="${rowspan}"><b>${it.name}</b></td>`:''}
-        <td>${(+k) > 0 ? k : 'وحدة'}</td>
-        <td>${bags}</td>
-        <td>${v.toFixed(2)}</td>
-        ${isFirst?`<td rowspan="${rowspan}"><b>${(it.totalKg||0).toFixed(2)}</b></td>`:''}
-      </tr>`;
-    });
-  });
-  const dateStr = inv.date || ctx.date;
-  const timeStr = inv.time || new Date().toLocaleTimeString('ar-EG',{hour:'2-digit',minute:'2-digit'});
-  return `
-    <h1>ᗩᘔIᘔ Eᗰᗩᗪ</h1>
-    <div class="sub">تقرير الجرد المخزني</div>
-    <table style="width:100%;margin-bottom:14px">
-      <tr><th style="width:25%">الفرع</th><td>${inv.branch || ctx.branch}</td>
-          <th style="width:25%">التاريخ</th><td>${dateStr}</td></tr>
-      <tr><th>الموظف</th><td>${inv.user || ctx.user}</td>
-          <th>الوقت</th><td>${timeStr}</td></tr>
-      <tr><th>عدد الأصناف</th><td>${items.length}</td>
-          <th>إجمالي الأوزان</th><td><b>${total.toFixed(2)} كجم</b></td></tr>
-    </table>
-    <table>
-      <thead><tr>
-        <th>#</th><th>الصنف</th><th>الوزن (كجم)</th>
-        <th>الشكاير</th><th>الكمية (كجم)</th><th>إجمالي الصنف</th>
-      </tr></thead>
-      <tbody>${tbody}</tbody>
-    </table>
-    <div class="totals">إجمالي الأصناف: ${items.length} — إجمالي الأوزان: ${total.toFixed(2)} كجم</div>
-    ${inv.transcript ? `<div class="transcript-box"><h4>📝 النص المسجل</h4>${}</div>` : ''}
-    <p class="footer">ᗩᘔIᘔ Eᗰᗩᗪ</p>`;
-}
-
-async function generatePDF(inv, filename){
-  const area = document.getElementById('reportArea');
-  area.innerHTML = buildReportHTML(inv);
-  area.style.position = 'absolute';
-  area.style.left = '-9999px';
-  area.style.top = '0';
-  area.style.width = '800px';
-  try {
-    const canvas = await html2canvas(area, {scale:2, backgroundColor:'#ffffff', useCORS:true});
-    const imgData = canvas.toDataURL('image/png');
-    const { jsPDF } = window.jspdf;
-    const pdf = new jsPDF('p','mm','a4');
-    const pageW = pdf.internal.pageSize.getWidth();
-    const pageH = pdf.internal.pageSize.getHeight();
-    const imgW = pageW - 20;
-    const imgH = canvas.height * imgW / canvas.width;
-    let heightLeft = imgH, position = 10;
-    pdf.addImage(imgData, 'PNG', 10, position, imgW, imgH);
-    heightLeft -= (pageH - 20);
-    while(heightLeft > 0){
-      position = heightLeft - imgH + 10;
-      pdf.addPage();
-      pdf.addImage(imgData, 'PNG', 10, position, imgW, imgH);
-      heightLeft -= (pageH - 20);
-    }
-    pdf.save(filename || `جرد_${ctx.branch}_${ctx.date}.pdf`);
-    return true;
-  } catch(e){
-    console.error('PDF error', e);
-    toast('فشل إنشاء PDF','err');
-    return false;
-  }
-}
-
-async function generatePNG(inv, filename){
-  const area = document.getElementById('reportArea');
-  area.innerHTML = buildReportHTML(inv);
-  try {
-    const canvas = await html2canvas(area, {scale:2, backgroundColor:'#ffffff', useCORS:true});
-    const link = document.createElement('a');
-    link.download = filename || `جرد_${ctx.branch}_${ctx.date}.png`;
-    link.href = canvas.toDataURL('image/png');
-    link.click();
-    return true;
-  } catch(e){
-    console.error('PNG error', e);
-    toast('فشل إنشاء الصورة','err');
-    return false;
-  }
-}
-
-async function printReport(){
-  if(!state.items.length){ toast('لا يوجد أصناف للطباعة','warn'); return; }
-  const ok = await generatePDF({
-    items: state.items,
-    branch: ctx.branch,
-    date: ctx.date,
-    user: ctx.user,
-    time: new Date().toLocaleTimeString('ar-EG',{hour:'2-digit',minute:'2-digit'}),
-    transcript: state.currentSessionTranscript
-  });
-  if(ok) toast('✅ تم تنزيل التقرير','ok');
-  closeModal();
-}
-
-/* ============================================================
-   Auto mode
-   ============================================================ */
-function toggleAutoMode(){
-  state.autoMode=!state.autoMode;
-  localStorage.setItem('autoMode',state.autoMode);
-  if(state.autoMode){ state.sessionActive=true; speakAndResume('اتشغل الوضع التلقائي'); }
-  else { state.sessionActive=false; clearTimeout(state.autoRestartTimer); stopRecording(); speak('اتوقف الوضع التلقائي'); }
-  updateAutoUI();
-}
-
-/* ============================================================
-   ARCHIVE — Firebase History
-   ============================================================ */
-async function saveInventoryArchive(){
-  if(!state.items.length){ toast('❌ لا يوجد أصناف لحفظها','warn'); return; }
-  if(!db){ toast('❌ Firebase غير متصل','err'); return; }
-  updateConnUI(true);
-  toast('⏳ جاري حفظ الجرد...','warn');
-  try {
-    const now = new Date();
-    const record = {
-      date: now.toISOString().slice(0,10),
-      time: now.toLocaleTimeString('ar-EG',{hour:'2-digit',minute:'2-digit'}),
-      timestamp: firebase.database.ServerValue.TIMESTAMP,
-      branch: ctx.branch,
-      user: ctx.user,
-      items: state.items,
-      total: state.items.reduce((a,i)=>a + i.totalKg, 0),
-      itemsCount: state.items.length,
-      transcript: state.currentSessionTranscript || '(لا يوجد نص مسجل)',
-      createdAt: Date.now()
-    };
-    const ref = db.ref('inventoryHistory').push();
-    await ref.set(record);
-    toast('✓ تم حفظ الجرد بنجاح','ok');
-    updateConnUI();
-    await loadArchive();
-  } catch(e){
-    console.error(e);
-    toast('❌ فشل حفظ الجرد','err');
-    updateConnUI();
-  }
-}
-
-async function loadArchive(){
-  if(!db){ document.getElementById('archiveList').innerHTML='<div class="empty">Firebase غير متصل</div>'; return; }
-  const listEl = document.getElementById('archiveList');
-  listEl.innerHTML = '<div class="loading-state"><div class="spinner-lg"></div>جارٍ تحميل الأرشيف...</div>';
-  try {
-    const snap = await db.ref('inventoryHistory').once('value');
-    const val = snap.val() || {};
-    const arr = Object.entries(val).map(([id,rec]) => ({ id, ...rec }));
-    arr.sort((a,b) => (b.timestamp || 0) - (a.timestamp || 0));
-    state.archive = arr;
-    renderArchive();
-  } catch(e){
-    console.error(e);
-    listEl.innerHTML = '<div class="empty">فشل تحميل الأرشيف</div>';
-  }
-}
-
-function renderArchive(){
-  const listEl = document.getElementById('archiveList');
-  const countEl = document.getElementById('archiveCount');
-  const { text, date } = state.archiveFilter;
-  let list = state.archive;
-  if(text) list = list.filter(r =>
-    (r.branch||'').includes(text) ||
-    (r.date||'').includes(text) ||
-    String(r.total||'').includes(text)
-  );
-  if(date) list = list.filter(r => (r.date||'') === date);
-  countEl.textContent = `${list.length} سجل`;
-
-  if(!list.length){
-    listEl.innerHTML = '<div class="empty">لا توجد سجلات محفوظة</div>';
-    return;
-  }
-
-  listEl.innerHTML = list.map(rec => {
-    const d = new Date(rec.createdAt || rec.timestamp || Date.now());
-    const dateLabel = rec.date || d.toISOString().slice(0,10);
-    const timeLabel = rec.time || d.toLocaleTimeString('ar-EG',{hour:'2-digit',minute:'2-digit'});
-    const dayName = d.toLocaleDateString('ar-EG',{weekday:'long', day:'numeric', month:'long', year:'numeric'});
-    return `
-      <div class="archive-card">
-        <div class="archive-head">
-          <div>
-            <div class="archive-title">📋 جرد ${dayName}</div>
-            <div class="archive-time">🕐 ${timeLabel} — ${dateLabel}</div>
-          </div>
-        </div>
-        <div class="archive-meta">
-          <div class="meta-pill">🏢 ${rec.branch || '—'}</div>
-          <div class="meta-pill">📦 ${rec.itemsCount || (rec.items||[]).length} صنف</div>
-          <div class="meta-pill ok">⚖️ ${(rec.total||0).toFixed(2)} كجم</div>
-        </div>
-        <div class="archive-actions">
-          <button class="view" onclick="viewArchive('${rec.id}')">👁️ عرض</button>
-          <button class="pdf" onclick="archivePDF('${rec.id}')">📄 PDF</button>
-          <button class="img" onclick="archivePNG('${rec.id}')">🖼️ صورة</button>
-          <button class="del" onclick="deleteArchive('${rec.id}')">🗑️ حذف</button>
-        </div>
-      </div>`;
-  }).join('');
-}
-
-window.viewArchive = function(id){
-  const rec = state.archive.find(r => r.id === id);
-  if(!rec) return;
-  const items = rec.items || [];
-  const total = items.reduce((a,i)=>a + (i.totalKg||0), 0);
-  const rows = items.map(it=>{
-    const variants = Object.keys(it.variants||{}).map(k=>{
-      const v = it.variants[k];
-      if(+k === 0) return `${v.toFixed(2)} (وحدة)`;
-      return `${(v/(+k)).toFixed(2)} شكارة × ${k}كجم = ${v.toFixed(2)}كجم`;
-    }).join(' + ');
-    return `
-      <div class="hist-item">
-        <div class="nm">${it.name}</div>
-        <div class="vv">${variants}</div>
-        <div class="tt"><span>الإجمالي</span><span>${(it.totalKg||0).toFixed(2)} كجم</span></div>
-      </div>`;
-  }).join('');
-  openModal(`
-    <h2>📋 ${rec.date} — ${rec.time||''}</h2>
-    <div class="hist-summary">
-      <div class="hist-stat"><div class="num">${items.length}</div><div class="lbl">عدد الأصناف</div></div>
-      <div class="hist-stat"><div class="num">${total.toFixed(2)}</div><div class="lbl">إجمالي كجم</div></div>
-      <div class="hist-stat"><div class="num">${rec.branch||'—'}</div><div class="lbl">الفرع</div></div>
-      <div class="hist-stat"><div class="num">${rec.user||'—'}</div><div class="lbl">الموظف</div></div>
-    </div>
-    <div class="hist-items">${rows || '<div class="empty">لا أصناف</div>'}</div>
-    ${rec.transcript ? `<div class="card" style="margin:0 0 12px;background:#f8fafc"><div style="font-size:11px;color:#64748b;font-weight:800;margin-bottom:6px">📝 النص المسجل</div><div style="font-size:12px;color:#334155;line-height:1.8;font-weight:600">${rec.transcript}</div></div>` : ''}
-    <div class="modal-actions">
-      <button class="btn btn-outline" onclick="closeModal()">إغلاق</button>
-      <button class="btn btn-accent" onclick="archivePDF('${rec.id}')">📄 PDF</button>
-      <button class="btn btn-primary" onclick="archivePNG('${rec.id}')">🖼️ صورة</button>
-    </div>
-  `);
-};
-
-window.archivePDF = async function(id){
-  const rec = state.archive.find(r => r.id === id);
-  if(!rec) return;
-  await generatePDF({
-    items: rec.items || [],
-    branch: rec.branch,
-    date: rec.date,
-    user: rec.user,
-    time: rec.time,
-    transcript: rec.transcript
-  }, `جرد_${rec.branch}_${rec.date}.pdf`);
-  toast('✅ تم تصدير PDF','ok');
-};
-
-window.archivePNG = async function(id){
-  const rec = state.archive.find(r => r.id === id);
-  if(!rec) return;
-  await generatePNG({
-    items: rec.items || [],
-    branch: rec.branch,
-    date: rec.date,
-    user: rec.user,
-    time: rec.time,
-    transcript: rec.transcript
-  }, `جرد_${rec.branch}_${rec.date}.png`);
-  toast('✅ تم تصدير الصورة','ok');
-};
-
-window.deleteArchive = async function(id){
-  if(!confirm('متأكد من حذف هذا السجل؟')) return;
-  if(!db) return;
-  try {
-    await db.ref(`inventoryHistory/${id}`).remove();
-    toast('تم حذف السجل','warn');
-    await loadArchive();
-    closeModal();
-  } catch(e){
-    toast('فشل الحذف','err');
-  }
-};
-
-/* ============================================================
-   Wire
-   ============================================================ */
-document.getElementById('micBtn').addEventListener('click',()=>{
-  if(state.recording) stopRecording();
-  else { state.sessionActive=true; startRecording(); }
-});
-document.getElementById('autoModeBtn').addEventListener('click',toggleAutoMode);
-document.getElementById('confirmBtn').addEventListener('click',()=>confirmPending(false));
-document.getElementById('rejectBtn').addEventListener('click',()=>{
-  cancelAutoConfirm();
-  state.pending=null;state.awaitingWeightFor=null;hideParseCard();
-  toast('تم الرفض','warn');speakAndResume('تمام، اتلغى');
-});
-document.querySelectorAll('.quick-actions button[data-cmd]').forEach(b=>{
-  b.addEventListener('click',()=>handleCommand(b.dataset.cmd));
-});
-document.getElementById('saveArchiveBtn').addEventListener('click', saveInventoryArchive);
-
-// Tabs
-document.querySelectorAll('.tab').forEach(t => {
-  t.addEventListener('click', () => {
-    document.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
-    document.querySelectorAll('.tab-panel').forEach(x => x.classList.remove('active'));
-    t.classList.add('active');
-    document.getElementById('tab-' + t.dataset.tab).classList.add('active');
-    document.getElementById('bottomBar').style.display = t.dataset.tab === 'live' ? '' : 'none';
-    if(t.dataset.tab === 'archive') loadArchive();
-  });
-});
-
-// Archive search
-document.getElementById('archiveSearch').addEventListener('input', e => {
-  state.archiveFilter.text = e.target.value.trim();
-  renderArchive();
-});
-document.getElementById('archiveDate').addEventListener('change', e => {
-  state.archiveFilter.date = e.target.value;
-  renderArchive();
-});
-
-/* ============================================================
-   Init
-   ============================================================ */
-(async function init(){
-  document.getElementById('branchLabel').textContent=ctx.branch;
-  document.getElementById('userLabel').textContent=ctx.user;
-  document.getElementById('dateLabel').textContent=ctx.date;
-  buildCatalog();
-  updateConnUI();
-  try { await loadCatalogFromFirebase(); } catch(e){}
-  renderItems();
-  updateAutoUI();
-  if(!SR) toast('متصفحك لا يدعم الصوت','err');
-  else toast('النظام جاهز 🎙️','ok');
-  // تحميل الأرشيف لو Firebase متصل
-  if(db) setTimeout(loadArchive, 800);
-  window.__testParser=(t)=>console.log(t,'→',parseInventoryCommand(t));
-})();
-</script>
-</body>
-</html>
+  if(!SR){
+    toast('متصفحك 
